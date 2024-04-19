@@ -1,0 +1,21 @@
+@import "base/color";
+@import "base/normalize";
+@import "base/typography";
+
+@import "components/buttons";
+
+@import "layout/footer";
+@import "layout/header";
+
+@import "page/index";
+
+
+/* CSS for the all website */
+h1, h2, h3, a, p, ul, ol, li, label, button, fieldset {
+    font-family: $font-main;
+    line-height: 1.8em;
+}
+
+body {
+    background-color: $main-color;
+}

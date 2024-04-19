@@ -1,0 +1,92 @@
+/****************************/
+/** CSS FOR THE INDEX PAGE **/
+/****************************/
+
+main {
+    
+    @media screen and (min-width: 992px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .c-t-a {
+            display: none !important;
+        }
+    }
+
+    section {
+        padding: 10px 4% 80px 4%;
+
+        .responsiv {
+            @media screen and (min-width: 1200px) {
+            
+                max-width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+
+    .introduction {
+        background-color: $main-color;
+
+        h2, h3 {
+            color: $headline;
+        }
+
+        p {color: $paragraph;}
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 60px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 110px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+
+    .calculator {
+        background: $clear-bckg;
+
+        h2, h3 {
+            color: $headline-clear-bckg;
+        }
+
+        fieldset {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            background-color: $main-color;
+            
+            border: none;
+            border-radius: 4px;
+            padding: 40px 15px 20px 15px;
+            margin-bottom: 20px;
+
+            label, p {
+                color: $paragraph;
+                margin: 16px 0px;
+            }
+
+            legend {
+                position: absolute;
+                top: 20px;
+                color: $headline;
+            }
+
+            textarea {
+                border: none;
+            }
+
+            .form-btn {
+                margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}

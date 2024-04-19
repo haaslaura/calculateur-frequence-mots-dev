@@ -1,0 +1,27 @@
+footer {
+    position: sticky;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    padding: 0 4% 0 4%;
+    font-size: 0.8em;
+    background-color: #abd1c6;
+
+    p {
+        color: $main-color !important;
+
+        a {
+            color: $other-link;
+            cursor: pointer;
+
+            &:hover {
+                color: $other-link-hover;
+            }
+            &:focus {
+                outline: 2px solid #004643;
+                border-radius: 4px;
+            }
+        }
+    }
+}

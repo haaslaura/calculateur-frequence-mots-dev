@@ -1,0 +1,17 @@
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    background-color: $main-color;
+    padding: 0 4% 40px 4%;
+
+    h1, h2 {
+        color: $headline;
+    }
+
+    h2 {
+        margin: 0;
+    }
+}

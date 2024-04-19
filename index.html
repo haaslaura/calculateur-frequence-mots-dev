@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400..700&display=swap" rel="stylesheet">
+
+    <!-- Script -->
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Wording calculator</h1>
+        <h2>Calculateur de fréquence d'apparition des mots clés</h2>
+    </header>
+    
+    <main>
+        <!-- Introduction and instructions for use -->
+        <section class="introduction">
+            <div class="responsiv">
+                <h2>Introduction</h2>
+                <p>Le "Wording" fait référence à votre manière de formuler quelque chose. En effet, ces derniers ont un sens : les choisir et les utiliser, aussi bien qualitativement que quantitativement, est vecteur d'information et d'émotion pour vos lecteurs.</p>
+                <h2>Mode d'emploi</h2>
+                <p>Entrez un texte dans le champ correspondant, ajustez les options puis cliquez sur "Calculer". Vous découvrirez quels mots reviennent le plus souvent dans votre discours.</p>
+                <a class="main-btn c-t-a" href="#calculator">Essayez le !</a>
+            </div>
+        </section>
+
+        <!-- Calculator -->
+        <section id="calculator" class="calculator">
+            <div class="responsiv">
+                <h2>Calculateur</h2>
+                
+                <form action="#" method="get">
+                    <fieldset>
+                        <legend>Entrez vos paramètres</legend>
+                        <p>Souhaitez-vous éliminer du résultat les articles (le, la, les, un, une, des, du, de la, des) ?</p>
+                        <div>
+                            <input type="radio" id="yes" name="yes" value="yes" checked />
+                            <label for="yes">Oui</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="no" name="no" value="no" />
+                            <label for="no">Non</label>
+                        </div>
+                    </fieldset>
+                
+                    <fieldset>
+                        <legend>Entrez votre texte</legend>
+                        
+                        <label for="text">Entrer le texte à étudier :</label>
+                        <textarea name="text" id="text" cols="30" rows="10" required></textarea>
+                        
+                        <button class="main-btn form-btn" type="submit">Calculer</button>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer>
+        <p>Cet outil est mis à votre disposition par <a href="https://laura-haas.dev/" target="_blank">Laura Haas</a></p>
+    </footer>
+    
+</body>
+</html>

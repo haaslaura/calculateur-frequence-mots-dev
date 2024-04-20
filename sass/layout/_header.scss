@@ -5,13 +5,17 @@ header {
     text-align: center;
 
     background-color: $main-color;
-    padding: 0 4% 40px 4%;
+    padding: 20px 4% 40px 4%;
+
+    .line {
+        background-color: $headline;
+        height: 4px;
+        width: 140px;
+        margin: 10px auto 20px auto;
+    }
 
     h1, h2 {
         color: $headline;
-    }
-
-    h2 {
         margin: 0;
     }
 }

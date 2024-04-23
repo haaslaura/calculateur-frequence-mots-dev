@@ -1,56 +1,18 @@
-// EXERCICE 3 : calculer la fréquence des mots dans une chaîne de caractère
+/**********************************************************************
 
-const textArea = document.querySelector("textarea");
-const calcBtn = document.querySelector("button");
-console.log(textArea);
-console.log(calcBtn);
+This JavaScript code is linked to the index.html page
 
-//const phrase = "Vous savez, moi je ne crois pas qu'il y ait de bonne ou de mauvaise situation. Moi, si je devais résumer ma vie aujourd'hui avec vous, je dirais que c'est d'abord des rencontres.";
-const phrase = textArea.value;
+**********************************************************************/
 
-// Retirer les caractères spéciaux + passer la phrase en minuscule + séparer les mots
-const regex = /[.,?!;()\[\]-]/g;
-const frequencies = {};
-const ignored = ['.', '?', '!', ':', ';', '"', '«', '»']
-let cleanedPhrase = phrase.toLowerCase();
-for(let character of ignored) {
-    cleanedPhrase = cleanedPhrase.replaceAll(character, '');
+// Importing data and functions
+import { FormManager } from "./classes/FormManager.js";
+
+
+function initPage() {
+
+    const formElement = document.getElementById("calculator__form");
+    const formManager = new FormManager(formElement);
+
 }
 
-const words = cleanedPhrase.split(' ');
-
-// Parcourir le tableau de mot
-for(let word of words){
-    
-    // Si mot trop petit on ne le prend pas en compte
-    if(word.length >= 4) {
-        
-        // Si il existe déjà on ajoute
-        if(frequencies[word]){
-            frequencies[word]++;
-        } else {
-            // Sinon on le créé
-            frequencies[word] = 1;
-        }
-    }
-}
-
-console.log(frequencies)
-
-const frequenciesArray = [];
-
-for (let k in frequencies) {
-    frequenciesArray.push({
-        word: k,
-        count: frequencies[k]})
-    }
-
-frequenciesArray.sort((a, b) => b.count - a.count)
-    
-console.log(`Les mots les plus fréquents sont "${frequenciesArray[0].word}" (${frequenciesArray[0].count}), "${frequenciesArray[1].word}" (${frequenciesArray[1].count}) et "${frequenciesArray[2].word}" (${frequenciesArray[2].count}).`);
-
-
-calcBtn.addEventListener("click", e => {
-    e.preventDefault();
-    console.log(("pouet"));
-});
+initPage();

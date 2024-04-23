@@ -1,7 +1,7 @@
 {
   "name": "calculateur-frequence-mots-dev",
   "version": "1.0.0",
-  "description": "",
+  "description": "Calculator of Wording application",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch sass/main.scss css/style.css",

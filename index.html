@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400..700&display=swap" rel="stylesheet">
 
     <!-- Script -->
-    <script src="index.js" defer></script>
+    <script type="module" src="script/index.js"></script>
 </head>
 
 <body>
@@ -40,15 +40,15 @@
             <div class="responsiv">
                 <h2>Calculateur</h2>
                 
-                <form action="#" method="get">
+                <form id="calculator__form" action="#" method="get">
                     <fieldset>
                         <legend>Entrez vos paramètres</legend>
                         <p>Souhaitez-vous éliminer du résultat les articles (le, la, les, un, une, des, du, de la, des) ?</p>
-                        <div>
+                        <div role="group" aria-labelledby="yes">
                             <input type="radio" id="yes" name="yes" value="yes" checked>
                             <label for="yes">Oui</label>
                         </div>
-                        <div>
+                        <div role="group" aria-labelledby="no">
                             <input type="radio" id="no" name="no" value="no">
                             <label for="no">Non</label>
                         </div>
@@ -57,14 +57,30 @@
                     <fieldset>
                         <legend>Entrez votre texte</legend>
                         
-                        <label for="text">Entrer le texte à étudier :</label>
-                        <textarea name="text" id="text" cols="30" rows="10" required></textarea>
+                        <label for="textfield">Entrer le texte à étudier :</label>
+                        <textarea name="textfield" id="textfield" cols="30" rows="10"></textarea>
+                        <p class="error-message hidden">Veuillez entrer un texte</p>
                         
                         <button class="main-btn form-btn" type="submit">Calculer</button>
                     </fieldset>
                 </form>
             </div>
         </section>
+
+        <!-- Modal -->
+        <dialog id="modal" aria-label="Fermer la modale">
+            <h2>Résultats</h2>
+            <p>Voici les termes qui reviennent le plus souvent dans votre contenu :</p>
+            <div>
+                <p class="tag">test</p>
+                <p class="tag">de</p>
+                <p class="tag">mot</p>
+                <p class="tag">pour</p>
+                <p class="tag">le</p>
+                <p class="tag">calculator</p>
+            </div>
+            <button class="lightbox__close" aria-label="Fermer la modale">Fermer</button>
+        </dialog>
 
     </main>
     
